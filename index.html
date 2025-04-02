@@ -82,8 +82,7 @@
         let lightMode = false;
 
         let value = input.value;
-        form.onsubmit = (e)=>{
-            e.preventDefault()
+        form.onsubmit = ()=>{
             value = input.value;
             lightMode = lightSwitchInput.checked;
 
@@ -101,7 +100,7 @@
                 //change url to work for qz embed by cutting off last / / section and adding learn/embed?i=1bxztw&x=1jj1
                 let valSplit = value.split("/");
                 value = valSplit[0] + "//" + valSplit[2] + "/" + valSplit[3] + "/";
-                value += studyModeSelected.value + "/embed?i=1bxztw&x=1jj1";
+                value += studyModeSelect.value + "/embed?i=1bxztw&x=1jj1";
                 console.log(value);
 
                 let iframe = document.createElement("iframe");
