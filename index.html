@@ -82,7 +82,8 @@
         let lightMode = false;
 
         let value = input.value;
-        form.onsubmit = ()=>{
+        form.onsubmit = (e)=>{
+            e.preventDefault()
             value = input.value;
             lightMode = lightSwitchInput.checked;
 
