@@ -76,7 +76,6 @@
         let lightSwitch = document.getElementById("lightSwitch");
         let lightSwitchInput = lightSwitch.querySelector("Input");
         let studyModeSelect = document.getElementById("studyModeSelect");
-        let studyModeSelected = studyModeSelected.value;
         
         let lightMode = false;
 
@@ -99,7 +98,7 @@
                 //change url to work for qz embed by cutting off last / / section and adding learn/embed?i=1bxztw&x=1jj1
                 let valSplit = value.split("/");
                 value = valSplit[0] + "//" + valSplit[2] + "/" + valSplit[3] + "/";
-                value += studyModeSelected + "/embed?i=1bxztw&x=1jj1";
+                value += studyModeSelected.value + "/embed?i=1bxztw&x=1jj1";
                 console.log(value);
 
                 let iframe = document.createElement("iframe");
